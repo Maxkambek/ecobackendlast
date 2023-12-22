@@ -5,13 +5,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-r_$#y+v+q=37wf)k-ehev%-2yyz%xr_k(*#)6rc-kh$yg(#kr('
 
-DEBUG = True
+DEBUG = False
 
-SITE_URL = 'https://backend.ecoekspertiza.uz'
+SITE_URL = 'http://ecoekspertiza.uz/'
 
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_COOKIE_SECURE = False
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -39,7 +41,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
